@@ -666,3 +666,89 @@ main {
   border: 1px solid rgba(148, 132, 110, 0.6);
   padding: 8px 12px;
   font-size: 
+/* =========================================
+   FLOATING FLAG STACK (PREMIUM MINI FLAGS)
+   ========================================= */
+
+.floating-flag-stack {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* geen klikproblemen */
+}
+
+/* Algemene stijl voor elke vlag */
+.flag-frame {
+  position: absolute;
+  width: 70px;              /* kleine vlag */
+  padding: 6px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #f2f2f2;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  text-align: center;
+  pointer-events: auto;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.flag-frame img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.flag-label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #444;
+  margin-top: 4px;
+}
+
+/* Hover effect */
+.flag-frame:hover {
+  transform: scale(1.12) rotate(0deg);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+/* =========================================
+   POSITIES (speels verspreid)
+   ========================================= */
+
+.frame-tr {
+  top: 40px;
+  right: 40px;
+  transform: rotate(-10deg);
+}
+
+.frame-en {
+  top: 140px;
+  right: 120px;
+  transform: rotate(8deg);
+}
+
+.frame-nl {
+  top: 260px;
+  right: 60px;
+  transform: rotate(-6deg);
+}
+
+.frame-es {
+  top: 360px;
+  right: 150px;
+  transform: rotate(12deg);
+}
+
+.frame-code {
+  top: 200px;
+  right: 240px;
+  transform: rotate(-12deg);
+}
+
+/* Responsive fix */
+@media (max-width: 900px) {
+  .flag-frame {
+    width: 55px;
+  }
+}
