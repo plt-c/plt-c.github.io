@@ -20,6 +20,7 @@
 
   --border-soft: #d6d2cb;
   --shadow-soft: 0 14px 40px rgba(0, 0, 0, 0.08);
+
   --radius-lg: 18px;
   --radius-md: 12px;
   --radius-sm: 8px;
@@ -199,7 +200,6 @@ main {
   font-size: 32px;
   line-height: 1.15;
   letter-spacing: 0.03em;
-  text-transform: none;
   margin-bottom: 14px;
 }
 
@@ -294,89 +294,6 @@ main {
 }
 
 /* =========================================
-   PHOTO FRAME
-   ========================================= */
-
-.photo-frame {
-  background: radial-gradient(circle at top left, #fff 0, #f3efe7 40%, #e8e2d8 100%);
-  border-radius: 26px;
-  padding: 18px;
-  box-shadow: var(--shadow-soft);
-  position: relative;
-  overflow: hidden;
-  transform: translateY(4px);
-  animation: floatFrame 7s ease-in-out infinite alternate;
-}
-
-.photo-inner {
-  border-radius: 20px;
-  border: 1px solid rgba(214, 210, 203, 0.9);
-  padding: 16px;
-  background: linear-gradient(145deg, #f8f5ee, #ece4d6);
-  min-height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.photo-label {
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.photo-placeholder {
-  margin-top: 10px;
-  border-radius: 16px;
-  border: 1px dashed rgba(148, 132, 110, 0.6);
-  padding: 18px;
-  font-size: 13px;
-  color: var(--text-soft);
-  text-align: center;
-}
-
-.status-box {
-  margin-top: 14px;
-  border-radius: 14px;
-  padding: 10px 12px;
-  background: rgba(224, 215, 199, 0.8);
-  font-size: 11px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-soft);
-}
-
-/* =========================================
-   SECTION WRAPPERS
-   ========================================= */
-
-.section-header {
-  margin-top: 32px;
-  margin-bottom: 18px;
-}
-
-.section-kicker {
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 6px;
-}
-
-.section-title {
-  font-size: 24px;
-  letter-spacing: 0.04em;
-  text-transform: none;
-}
-
-.section-sub {
-  font-size: 13px;
-  color: var(--text-soft);
-  max-width: 520px;
-}
-
-/* =========================================
    CARDS / GRID
    ========================================= */
 
@@ -425,7 +342,6 @@ main {
 .card-list li {
   margin-bottom: 6px;
 }
-
 /* =========================================
    EXPERIENCE
    ========================================= */
@@ -553,7 +469,7 @@ main {
 }
 
 /* =========================================
-   LANGUAGES
+   LANGUAGES (LEFT SIDE)
    ========================================= */
 
 .language-list {
@@ -594,7 +510,7 @@ main {
 }
 
 /* =========================================
-   PERSONAL / HOBBIES
+   HOBBIES
    ========================================= */
 
 .hobby-grid {
@@ -748,174 +664,92 @@ main {
     transform: translateY(0);
   }
 }
-/* ============================
-   SKILLSET MATRIX V4.0 UPGRADE
-   ============================ */
+/* =========================================
+   LANGUAGE PAGE — POLAROID STACK (SAFE)
+   ========================================= */
 
-/* Grid layout */
-.card-grid-2 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  align-items: start;
-}
-
-/* Skill blocks */
-.skill-block {
-  background: #ffffff;
-  padding: 22px 26px;
-  border-radius: 16px;
-  border: 1px solid #e5e5e5;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-  transition: all 0.25s ease;
-}
-
-.skill-block:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.10);
-}
-
-/* Titles */
-.skill-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 14px;
-  color: #222;
-  letter-spacing: 0.3px;
-}
-
-/* Lists */
-.skill-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.skill-list li {
-  padding: 6px 0;
-  font-size: 0.95rem;
-  color: #444;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+/* Container for the chaotic stack */
+.lang-polaroid-stack {
   position: relative;
+  height: 280px;
+  margin-bottom: 22px;
+  pointer-events: none; /* prevents weird hover overlaps */
 }
 
-/* Bullet icon */
-.skill-list li::before {
-  content: "•";
-  color: #2e7d32; /* premium green */
-  font-size: 1.2rem;
-  line-height: 0;
-}
-
-/* Left column spacing */
-.skill-left .skill-block {
-  border-left: 4px solid #2e7d32;
-}
-
-/* Right column spacing */
-.skill-right .skill-block {
-  border-left: 4px solid #1e88e5;
-}
-
-/* Section header */
-.section-header .section-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-}
-
-.section-header .section-sub {
-  max-width: 600px;
-  color: #555;
-  margin-top: 10px;
-}
-
-/* Fade animation */
-.fade-in-up {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.6s ease forwards;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.language-photo-stack {
-  position: relative;
-  height: 220px;
-  margin-bottom: 18px;
-}
-
-.photo-frame {
+/* Polaroid frame (unique class, safe) */
+.lang-polaroid-frame {
   position: absolute;
-  width: 120px;
-  background: #fff;
-  padding: 8px;
-  border-radius: 8px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
-  border: 2px solid #f5f5f5;
+  width: 130px;
+  background: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #f2f2f2;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 6px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  pointer-events: auto; /* hover works */
 }
 
-.photo-frame img {
+.lang-polaroid-frame img {
   width: 100%;
   height: auto;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
-.photo-label {
+.lang-polaroid-label {
   font-size: 0.75rem;
   font-weight: 600;
   color: #444;
+  text-align: center;
 }
 
-/* Positions & rotations (back to front) */
-.frame-nl {
-  top: 40px;
+/* =========================================
+   CHAOTIC WIND POSITIONS (asymmetric)
+   ========================================= */
+
+.lang-nl {
+  top: 50px;
   left: 10px;
-  transform: rotate(-6deg);
+  transform: rotate(-14deg);
   z-index: 1;
 }
 
-.frame-en {
-  top: 20px;
-  left: 60px;
-  transform: rotate(4deg);
+.lang-en {
+  top: 5px;
+  left: 130px;
+  transform: rotate(9deg);
   z-index: 2;
 }
 
-.frame-tr {
-  top: 55px;
-  left: 110px;
-  transform: rotate(-3deg);
+.lang-tr {
+  top: 90px;
+  left: 220px;
+  transform: rotate(-7deg);
   z-index: 3;
 }
 
-.frame-es {
-  top: 30px;
-  left: 160px;
-  transform: rotate(5deg);
+.lang-es {
+  top: 20px;
+  left: 300px;
+  transform: rotate(16deg);
   z-index: 4;
 }
 
-.frame-code {
-  top: 45px;
-  left: 210px;
-  transform: rotate(-2deg);
+.lang-code {
+  top: 70px;
+  left: 380px;
+  transform: rotate(-11deg);
   z-index: 5;
 }
 
-/* Hover effect */
-.photo-frame:hover {
-  transform: translateY(-6px) scale(1.03) rotate(0deg);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+/* =========================================
+   Hover effect (smooth + premium)
+   ========================================= */
+
+.lang-polaroid-frame:hover {
+  transform: scale(1.08) rotate(0deg);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.28);
 }
