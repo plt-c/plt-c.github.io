@@ -44,8 +44,9 @@
           </p>
         </header>
 
-        <!-- GRID -->
-        <section class="card-grid-2 fade-in-up">
+        <!-- GRID CONTAINER -->
+        <!-- We voegen style="position: relative;" toe zodat de vlaggen binnen deze sectie blijven zweven -->
+        <section class="card-grid-2 fade-in-up" style="position: relative; min-height: 600px;">
 
           <!-- LEFT SIDE: CEFR LEVELS -->
           <div class="language-list">
@@ -100,40 +101,8 @@
 
           </div>
 
-          <!-- RIGHT SIDE: POLAROID STACK + TEXT -->
+          <!-- RIGHT SIDE: TEXT BOX -->
           <aside class="card">
-
-            <!-- POLAROID STACK -->
-            <div class="lang-polaroid-stack">
-
-              <div class="lang-polaroid-frame lang-nl">
-                <img src="assets/flag-nl.png" alt="Dutch flag">
-                <div class="lang-polaroid-label">Dutch</div>
-              </div>
-
-              <div class="lang-polaroid-frame lang-en">
-                <img src="assets/flag-en.png" alt="English flag">
-                <div class="lang-polaroid-label">English</div>
-              </div>
-
-              <div class="lang-polaroid-frame lang-tr">
-                <img src="assets/flag-tr.png" alt="Turkish flag">
-                <div class="lang-polaroid-label">Turkish</div>
-              </div>
-
-              <div class="lang-polaroid-frame lang-es">
-                <img src="assets/flag-es.png" alt="Spanish flag">
-                <div class="lang-polaroid-label">Spanish</div>
-              </div>
-
-              <div class="lang-polaroid-frame lang-code">
-                <img src="assets/coding-python.png" alt="Coding languages">
-                <div class="lang-polaroid-label">Coding</div>
-              </div>
-
-            </div>
-
-            <!-- TEXT -->
             <div class="card-title">Professional Communication & Technical Language Skills</div>
 
             <p class="card-sub">
@@ -144,16 +113,44 @@
 
             <p class="card-sub">
               In addition to spoken languages, I also work confidently with several technical languages and tools.
-              I have hands‑on experience with Python, HTML, CSS, JavaScript, and SQL databases, which helps me understand
-              system logic, automate tasks, and support development‑related workflows when needed.
+              I have hands‑on experience with Python, HTML, CSS, JavaScript, and SQL databases.
             </p>
 
             <p class="card-sub">
               This combination of human languages and technical languages enables me to bridge the gap between users and
               technology in a professional and efficient way.
             </p>
-
           </aside>
+
+          <!-- FLOATING POLAROID STACK (Deze staat nu LOS van de tekstbox) -->
+          <div class="floating-flag-stack">
+            
+            <div class="flag-frame frame-tr">
+              <img src="assets/flag-tr.png" alt="Turkish flag">
+              <div class="flag-label">Turkish</div>
+            </div>
+
+            <div class="flag-frame frame-en">
+              <img src="assets/flag-en.png" alt="English flag">
+              <div class="flag-label">English</div>
+            </div>
+
+            <div class="flag-frame frame-nl">
+              <img src="assets/flag-nl.png" alt="Dutch flag">
+              <div class="flag-label">Dutch</div>
+            </div>
+
+            <div class="flag-frame frame-es">
+              <img src="assets/flag-es.png" alt="Spanish flag">
+              <div class="flag-label">Spanish</div>
+            </div>
+
+            <div class="flag-frame frame-code">
+              <img src="assets/coding-python.png" alt="Coding languages">
+              <div class="flag-label">Coding</div>
+            </div>
+
+          </div>
 
         </section>
       </div>
