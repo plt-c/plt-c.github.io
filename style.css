@@ -787,3 +787,39 @@ main {
   left: 45%;
   transform: rotate(-8deg);
 }
+/* =========================================
+   LANGUAGE ICON GRID (LIKE YOUR EXAMPLE)
+   ========================================= */
+
+.language-icon-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-soft);
+  box-shadow: var(--shadow-soft);
+}
+
+.lang-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.lang-icon img {
+  width: 55px;
+  height: 38px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.lang-icon span {
+  font-size: 13px;
+  color: var(--text-soft);
+  font-weight: 500;
+}
