@@ -27,6 +27,16 @@
 
   --transition-fast: 0.18s ease-out;
   --transition-med: 0.28s ease-out;
+
+  /* ===== Extra vars voor PREMIUM TABLE SYSTEM (alleen skills) ===== */
+  --surface: var(--bg-card);
+  --surface-hover: #ece4d7;
+  --accent: var(--accent-green);
+  --on-accent: #ffffff;
+  --border: var(--border-soft);
+  --text: var(--text-soft);
+  --shadow-sm: var(--shadow-soft);
+  --shadow-xs: 0 8px 20px rgba(0, 0, 0, 0.10);
 }
 
 /* =========================================
@@ -342,6 +352,7 @@ main {
 .card-list li {
   margin-bottom: 6px;
 }
+
 /* =========================================
    EXPERIENCE
    ========================================= */
@@ -664,6 +675,7 @@ main {
     transform: translateY(0);
   }
 }
+
 /* =========================================
    LANGUAGE PAGE — POLAROID STACK (SAFE)
    ========================================= */
@@ -753,87 +765,91 @@ main {
   transform: scale(1.08) rotate(0deg);
   box-shadow: 0 14px 32px rgba(0,0,0,0.28);
 }
+
 /* ================================
    PREMIUM TABLE SYSTEM (SKILLS)
    ================================ */
 
 .table-wrapper {
-    width: 100%;
-    overflow-x: auto;
-    padding: 1rem 0;
+  width: 100%;
+  overflow-x: auto;
+  padding: 1rem 0;
 }
 
 table {
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--surface);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-sm);
-    font-size: 0.95rem;
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  font-size: 0.95rem;
 }
 
 table thead {
-    background: var(--accent);
-    color: var(--on-accent);
-    text-align: left;
+  background: var(--accent);
+  color: var(--on-accent);
+  text-align: left;
 }
 
 table thead th {
-    padding: 0.9rem 1rem;
-    font-weight: 600;
-    white-space: nowrap;
+  padding: 0.9rem 1rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 table tbody tr {
-    border-bottom: 1px solid var(--border);
-    transition: background 0.15s ease;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s ease;
 }
 
 table tbody tr:hover {
-    background: var(--surface-hover);
+  background: var(--surface-hover);
 }
 
 table td {
-    padding: 0.8rem 1rem;
-    color: var(--text);
+  padding: 0.8rem 1rem;
+  color: var(--text);
 }
 
 table td:last-child,
 table th:last-child {
-    text-align: right;
+  text-align: right;
 }
 
 /* Responsive stacking for mobile */
 @media (max-width: 700px) {
-    table thead {
-        display: none;
-    }
+  table thead {
+    display: none;
+  }
 
-    table, table tbody, table tr, table td {
-        display: block;
-        width: 100%;
-    }
+  table,
+  table tbody,
+  table tr,
+  table td {
+    display: block;
+    width: 100%;
+  }
 
-    table tr {
-        margin-bottom: 1rem;
-        background: var(--surface);
-        border-radius: var(--radius-md);
-        box-shadow: var(--shadow-xs);
-        padding: 0.5rem 0;
-    }
+  table tr {
+    margin-bottom: 1rem;
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-xs);
+    padding: 0.5rem 0;
+  }
 
-    table td {
-        padding: 0.7rem 1rem;
-        position: relative;
-        text-align: left !important;
-    }
+  table td {
+    padding: 0.7rem 1rem;
+    position: relative;
+    text-align: left !important;
+  }
 
-    table td::before {
-        content: attr(data-label);
-        font-weight: 600;
-        color: var(--text-muted);
-        display: block;
-        margin-bottom: 0.25rem;
-    }
+  table td::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 0.25rem;
+  }
 }
