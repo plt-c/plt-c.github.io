@@ -830,13 +830,6 @@ main {
    FIX: voorkom dat vlaggen verdwijnen
    ========================================= */
 
-/* Alle afbeeldingen zijn volledig zichtbaar en helder */
-img {
-  opacity: 1 !important;
-  filter: none !important;
-  transition: opacity .25s ease;
-}
-
 /* Enhanced Progress bars */
 .language-bar {
   position: relative;
