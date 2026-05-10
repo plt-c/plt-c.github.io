@@ -830,10 +830,39 @@ main {
    FIX: voorkom dat vlaggen verdwijnen
    ========================================= */
 
-/* Alle afbeeldingen zijn volledig zichtbaar */
+/* Alle afbeeldingen zijn volledig zichtbaar en helder */
 img {
-  opacity: 1;
+  opacity: 1 !important;
+  filter: none !important;
   transition: opacity .25s ease;
+}
+
+/* Enhanced Progress bars */
+.language-bar {
+  position: relative;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(44, 36, 32, 0.08);
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.language-fill {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #4a90e2, #6ab0ff);
+  box-shadow: 0 0 12px rgba(74, 144, 226, 0.4);
+  transform-origin: left;
+}
+
+.percent-loaded {
+  font-size: 10px;
+  font-family: monospace;
+  color: var(--text-muted);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 /* Photo Frame Component */
