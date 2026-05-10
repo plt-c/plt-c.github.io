@@ -80,22 +80,23 @@
 <body class="bg-beige-50 text-ink/90 font-sans selection:bg-brand-blue/20 antialiased min-h-screen flex flex-col">
 
     <!-- SITE HEADER: Brand & Navigation -->
-    <header class="w-full border-b border-ink/5 bg-beige-50/80 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-[1600px] mx-auto px-6 h-24 flex justify-between items-center">
-            <div class="flex flex-col">
-                <span class="font-bold tracking-tighter text-2xl text-ink uppercase">Polat Caliskan</span>
-                <span class="text-[10px] font-mono tracking-[0.25em] text-ink/40 uppercase pt-2 leading-none">System & Network Support</span>
-            </div>
-            <nav class="hidden lg:flex items-center space-x-1">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="personal.html" class="nav-link">Biography</a>
-                <a href="experience.html" class="nav-link">Experience</a>
-                <a href="education.html" class="nav-link">Learning</a>
-                <a href="skills.html" class="nav-link">Skills</a>
-                <a href="languages.html" class="nav-link-active">Languages</a>
-                <a href="hobbies.html" class="nav-link">Personal</a>
-            </nav>
+    <header class="site-header">
+      <div class="nav-inner">
+        <div class="brand-block">
+          <div class="brand-title">POLAT CALISKAN</div>
+          <div class="brand-sub">SYSTEM & NETWORK SUPPORT</div>
         </div>
+
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link">Index</a>
+          <a href="personal.html" class="nav-link">Biography</a>
+          <a href="experience.html" class="nav-link">Experience</a>
+          <a href="education.html" class="nav-link">Learning</a>
+          <a href="skills.html" class="nav-link">Skills</a>
+          <a href="languages.html" class="nav-link active">Languages</a>
+          <a href="hobbies.html" class="nav-link">Personal</a>
+        </nav>
+      </div>
     </header>
 
     <!-- PAGE CONTENT -->
@@ -194,7 +195,7 @@
                         <!-- IMAGE FRAME: Dutch Flag -->
                         <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(80px, -160px) rotate(-12deg); z-index: 10;">
                             <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
-                                <img src="assets/flag-nl.jpg" alt="Dutch Flag" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                                <img src="assets/flag-nl.jpg" alt="Dutch Flag" class="w-full h-full object-cover transition-all duration-1000">
                                 <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm z-20 font-bold">LANG_NL_SECURED</div>
                             </div>
                         </div>
@@ -202,7 +203,7 @@
                         <!-- IMAGE FRAME: UK Flag -->
                         <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(160px, -20px) rotate(6deg); z-index: 9; animation-delay: 1s;">
                             <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
-                                <img src="assets/flag-en.jpg" alt="UK Flag" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                                <img src="assets/flag-en.jpg" alt="UK Flag" class="w-full h-full object-cover transition-all duration-1000">
                                 <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm z-20 font-bold">LANG_UK_ENCRYPTED</div>
                             </div>
                         </div>
@@ -210,7 +211,7 @@
                         <!-- IMAGE FRAME: Turkish Flag -->
                         <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(100px, 140px) rotate(-8deg); z-index: 8; animation-delay: 2s;">
                             <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
-                                <img src="assets/flag-tr.jpg" alt="Turkish Flag" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                                <img src="assets/flag-tr.jpg" alt="Turkish Flag" class="w-full h-full object-cover transition-all duration-1000">
                                 <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm z-20 font-bold">LANG_TR_NATIVE</div>
                             </div>
                         </div>
@@ -218,7 +219,7 @@
                         <!-- IMAGE FRAME: Spanish Flag -->
                         <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(-40px, 260px) rotate(10deg); z-index: 7; animation-delay: 3s;">
                             <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
-                                <img src="assets/flag-es.jpg" alt="Spanish Flag" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                                <img src="assets/flag-es.jpg" alt="Spanish Flag" class="w-full h-full object-cover transition-all duration-1000">
                                 <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm z-20 font-bold">LANG_ES_PARTIAL</div>
                             </div>
                         </div>
@@ -226,7 +227,7 @@
                         <!-- IMAGE FRAME: Code Symbol -->
                         <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(-260px, 360px) rotate(-4deg); z-index: 6; animation-delay: 4s;">
                             <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
-                                <img src="assets/flag-code.jpg" alt="Coding Symbol" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                                <img src="assets/flag-code.jpg" alt="Coding Symbol" class="w-full h-full object-cover transition-all duration-1000">
                                 <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm z-20 font-bold">LOGIC_PYTHON_V4</div>
                             </div>
                         </div>
