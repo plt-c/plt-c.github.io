@@ -13,27 +13,6 @@
     <!-- TAILWIND (alleen voor content, niet voor navbar) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'beige-50': '#F5F2ED',
-                        'beige-100': '#E8E2D9',
-                        'beige-200': '#D9D3C9',
-                        'brand-blue': '#4A90E2',
-                        'ink': '#2C2420',
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
-                        mono: ['JetBrains Mono', 'Courier New', 'Courier', 'monospace'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
     <!-- OVERRIDE: Tailwind mag navbar NIET beïnvloeden -->
     <style>
         header.site-header,
@@ -76,7 +55,7 @@
 <body class="bg-beige-50 text-ink/90 font-sans selection:bg-brand-blue/20 antialiased min-h-screen flex flex-col">
 
     <!-- ========================================= -->
-    <!-- FIXED NAVBAR (100% IDENTIEK AAN ANDERE PAGINA’S) -->
+    <!-- FIXED NAVBAR (100% IDENTIEK AAN FOTO 2) -->
     <!-- ========================================= -->
     <header class="site-header">
         <div class="nav-inner">
@@ -91,7 +70,7 @@
                 <a href="experience.html" class="nav-link" data-nav="experience">Experience</a>
                 <a href="education.html" class="nav-link" data-nav="education">Learning</a>
                 <a href="skills.html" class="nav-link" data-nav="skills">Skills</a>
-                <a href="languages.html" class="nav-link active" data-nav="languages">Languages</a>
+                <a href="languages.html" class="nav-link" data-nav="languages">Languages</a>
                 <a href="hobbies.html" class="nav-link" data-nav="hobbies">Personal</a>
             </nav>
         </div>
