@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<!-- PAGE: Static Languages Profile -->
-<!-- DESCRIPTION: A standalone, high-fidelity static version of the Linguistic Stack page. -->
-<!-- PURPOSE: Built for easy sharing on GitHub or previewing without a React environment. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Polat Caliskan | Linguistic Stack</title>
-    
-    <!-- FONTS: Professional Typography Suite -->
+
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-    
-    <!-- STYLING: Tailwind CSS via Play CDN -->
+
+    <!-- TAILWIND (alleen voor content, niet voor navbar) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <script>
         tailwind.config = {
             theme: {
@@ -37,37 +34,35 @@
         }
     </script>
 
+    <!-- OVERRIDE: Tailwind mag navbar NIET beïnvloeden -->
+    <style>
+        header.site-header,
+        header.site-header * {
+            all: unset;
+            display: revert;
+        }
+    </style>
+
+    <!-- JOUW EIGEN CSS (moet NA Tailwind geladen worden) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind component styles -->
     <style type="text/tailwindcss">
-        /* =========================================
-           DESIGN SYSTEM: Custom Component Logic
-           ========================================= */
         @layer components {
             .tech-mono {
                 @apply font-mono text-[10px] tracking-[0.1em] uppercase opacity-60;
             }
-
-            .nav-link-active {
-                @apply text-brand-blue font-mono text-xs tracking-[0.2em] uppercase transition-all bg-beige-100/80 px-4 py-2 rounded-full relative after:absolute after:bottom-1 after:left-1/4 after:right-1/4 after:h-[2px] after:bg-brand-blue;
-            }
-
-            .nav-link {
-                @apply text-ink/60 hover:text-ink font-mono text-xs tracking-[0.2em] uppercase transition-all px-4 py-2 rounded-full;
-            }
-
             .photo-frame {
                 @apply relative overflow-hidden bg-beige-100 border-[12px] border-white shadow-[0_10px_30px_rgba(44,36,32,0.1)] transition-all duration-500 hover:rotate-2 hover:scale-[1.02];
             }
-
             .progress-bar {
                 @apply h-2 w-full bg-slate-200 rounded-full overflow-hidden;
             }
-
             .progress-fill {
                 @apply h-full bg-brand-blue shadow-[0_0_8px_rgba(74,144,226,0.3)] transition-all duration-1000 ease-out;
             }
         }
 
-        /* ANIMATION: Subtle Floating Motion */
         @keyframes float {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-8px); }
@@ -77,31 +72,38 @@
         }
     </style>
 </head>
+
 <body class="bg-beige-50 text-ink/90 font-sans selection:bg-brand-blue/20 antialiased min-h-screen flex flex-col">
- <!-- HEADER -->
+
+    <!-- ========================================= -->
+    <!-- FIXED NAVBAR (100% IDENTIEK AAN ANDERE PAGINA’S) -->
+    <!-- ========================================= -->
     <header class="site-header">
-      <div class="nav-inner">
-        <div class="brand-block">
-          <div class="brand-title">POLAT CALISKAN</div>
-          <div class="brand-sub">SYSTEM &amp; NETWORK SUPPORT</div>
+        <div class="nav-inner">
+            <div class="brand-block">
+                <div class="brand-title">POLAT CALISKAN</div>
+                <div class="brand-sub">SYSTEM & NETWORK SUPPORT</div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link" data-nav="home">Home</a>
+                <a href="personal.html" class="nav-link" data-nav="personal">Biography</a>
+                <a href="experience.html" class="nav-link" data-nav="experience">Experience</a>
+                <a href="education.html" class="nav-link" data-nav="education">Learning</a>
+                <a href="skills.html" class="nav-link" data-nav="skills">Skills</a>
+                <a href="languages.html" class="nav-link active" data-nav="languages">Languages</a>
+                <a href="hobbies.html" class="nav-link" data-nav="hobbies">Personal</a>
+            </nav>
         </div>
-        <nav class="nav-links">
-          <a href="index.html" class="nav-link" data-nav="home">Home</a>
-          <a href="personal.html" class="nav-link" data-nav="personal">Biography</a>
-          <a href="experience.html" class="nav-link" data-nav="experience">experience</a>
-          <a href="education.html" class="nav-link" data-nav="education">Learning</a>
-          <a href="skills.html" class="nav-link" data-nav="skills">Skills</a>
-          <a href="languages.html" class="nav-link" data-nav="languages">languages</a>
-          <a href="hobbies.html" class="nav-link" data-nav="hobbies">Personal</a>
-          
-        </nav>
-      </div>
     </header>
+
+    <!-- ========================================= -->
     <!-- PAGE CONTENT -->
+    <!-- ========================================= -->
     <main class="flex-grow">
         <div class="max-w-7xl mx-auto px-6 py-20 overflow-hidden">
-            
-            <!-- SECTION: Page Heading -->
+
+            <!-- PAGE HEADER -->
             <header class="mb-20 text-center md:text-left">
                 <div class="tech-mono text-brand-blue mb-2">The Stack of Languages</div>
                 <h1 class="text-4xl lg:text-6xl font-light tracking-tight text-ink mb-4">
@@ -112,12 +114,13 @@
                 </p>
             </header>
 
+            <!-- GRID LAYOUT -->
             <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr_1.2fr] gap-16 lg:gap-8 items-start">
-                
-                <!-- SECTION: Language Proficiency Matrix -->
+
+                <!-- LANGUAGE PROFICIENCY -->
                 <div class="space-y-12">
-                    
-                    <!-- COMPONENT: Dutch Proficiency -->
+
+                    <!-- DUTCH -->
                     <div class="space-y-4">
                         <div class="flex justify-between items-end">
                             <div class="space-y-1">
@@ -131,7 +134,7 @@
                         </div>
                     </div>
 
-                    <!-- COMPONENT: English Proficiency -->
+                    <!-- ENGLISH -->
                     <div class="space-y-4">
                         <div class="flex justify-between items-end">
                             <div class="space-y-1">
@@ -145,7 +148,7 @@
                         </div>
                     </div>
 
-                    <!-- COMPONENT: Turkish Proficiency -->
+                    <!-- TURKISH -->
                     <div class="space-y-4">
                         <div class="flex justify-between items-end">
                             <div class="space-y-1">
@@ -159,7 +162,7 @@
                         </div>
                     </div>
 
-                    <!-- COMPONENT: Spanish Proficiency -->
+                    <!-- SPANISH -->
                     <div class="space-y-4">
                         <div class="flex justify-between items-end">
                             <div class="space-y-1">
@@ -174,7 +177,7 @@
                     </div>
                 </div>
 
-                <!-- SECTION: Communication Metadata - Briding Element -->
+                <!-- COMMUNICATION METADATA -->
                 <div class="space-y-6 lg:mt-24 lg:px-6 relative border-l-0 lg:border-l lg:border-r border-ink/5">
                     <div class="tech-mono text-brand-blue border-l-2 border-brand-blue pl-4 mb-6">Communication Metadata</div>
                     <p class="text-sm text-ink/70 leading-relaxed font-light">
@@ -186,78 +189,71 @@
                     </p>
                 </div>
 
-                <!-- SECTION: Supporting Imagery - Asymmetrical Arc Stack -->
+                <!-- FLOATING FLAG STACK -->
                 <div class="relative h-[650px] lg:h-[750px] mt-12 lg:mt-0 flex items-start justify-center">
                     <div class="relative w-full max-w-[180px] lg:max-w-sm">
-                        
-                        <!-- IMAGE FRAME: Dutch Flag -->
+
+                        <!-- NL -->
                         <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(80px, -160px) rotate(-12deg); z-index: 10;">
                             <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
-                                <img src="assets/flag-nl.jpg" alt="Dutch Flag" class="w-full h-full object-cover transition-all duration-1000">
-                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm z-20 font-bold">LANG_NL_SECURED</div>
+                                <img src="assets/flag-nl.jpg" alt="Dutch Flag">
+                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm font-bold">LANG_NL_SECURED</div>
                             </div>
                         </div>
 
-                        <!-- IMAGE FRAME: UK Flag -->
+                        <!-- EN -->
                         <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(160px, -20px) rotate(6deg); z-index: 9; animation-delay: 1s;">
                             <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
-                                <img src="assets/flag-en.jpg" alt="UK Flag" class="w-full h-full object-cover transition-all duration-1000">
-                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm z-20 font-bold">LANG_UK_ENCRYPTED</div>
+                                <img src="assets/flag-en.jpg" alt="UK Flag">
+                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm font-bold">LANG_UK_ENCRYPTED</div>
                             </div>
                         </div>
 
-                        <!-- IMAGE FRAME: Turkish Flag -->
+                        <!-- TR -->
                         <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(100px, 140px) rotate(-8deg); z-index: 8; animation-delay: 2s;">
                             <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
-                                <img src="assets/flag-tr.jpg" alt="Turkish Flag" class="w-full h-full object-cover transition-all duration-1000">
-                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm z-20 font-bold">LANG_TR_NATIVE</div>
+                                <img src="assets/flag-tr.jpg" alt="Turkish Flag">
+                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm font-bold">LANG_TR_NATIVE</div>
                             </div>
                         </div>
 
-                        <!-- IMAGE FRAME: Spanish Flag -->
+                        <!-- ES -->
                         <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(-40px, 260px) rotate(10deg); z-index: 7; animation-delay: 3s;">
                             <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
-                                <img src="assets/flag-es.jpg" alt="Spanish Flag" class="w-full h-full object-cover transition-all duration-1000">
-                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm z-20 font-bold">LANG_ES_PARTIAL</div>
+                                <img src="assets/flag-es.jpg" alt="Spanish Flag">
+                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm font-bold">LANG_ES_PARTIAL</div>
                             </div>
                         </div>
 
-                        <!-- IMAGE FRAME: Code Symbol -->
+                        <!-- CODE -->
                         <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(-260px, 360px) rotate(-4deg); z-index: 6; animation-delay: 4s;">
                             <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
-                                <img src="assets/flag-code.jpg" alt="Coding Symbol" class="w-full h-full object-cover transition-all duration-1000">
-                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm z-20 font-bold">LOGIC_PYTHON_V4</div>
+                                <img src="assets/flag-code.jpg" alt="Coding Symbol">
+                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm font-bold">LOGIC_PYTHON_V4</div>
                             </div>
                         </div>
 
-                        <!-- DECORATIVE: Tech Element Blur/Shapes -->
-                        <div class="absolute -z-10 -top-20 -right-20 w-48 h-48 border border-brand-blue/5 rounded-full animate-pulse"></div>
-                        <div class="absolute -z-10 bottom-0 -left-10 w-32 h-32 bg-brand-blue/5 blur-3xl rounded-full"></div>
                     </div>
                 </div>
+
             </div>
         </div>
     </main>
 
-    <!-- SITE FOOTER -->
-    <footer class="w-full border-t border-ink/5 bg-white/30 backdrop-blur-sm py-10">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between gap-6 opacity-60">
-                <div class="flex flex-col gap-2">
-                    <span class="tech-mono">Location: Rotterdam, NL</span>
-                    <span class="tech-mono">Protocol: Secure_Linguistic_V4</span>
-                </div>
-                <div class="flex flex-col md:items-end gap-2 text-right">
-                    <span class="tech-mono">Est. 2024 – Polat_Version_3.0</span>
-                    <div class="flex gap-4">
-                        <span class="tech-mono underline cursor-pointer">GitHub: PLT-C</span>
-                        <span class="tech-mono underline cursor-pointer">LinkedIn: Polat-Caliskan</span>
-                    </div>
-                </div>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-row">
+                <span>Location: Rotterdam, NL</span>
+                <span>Protocol: Secure_Linguistic_V4</span>
+            </div>
+            <div class="footer-row">
+                <span>Est. 2024 – Polat_Version_3.0</span>
+                <span>GitHub: PLT-C</span>
+                <span>LinkedIn: Polat-Caliskan</span>
             </div>
         </div>
     </footer>
 
-    <!-- TODO: To share this on GitHub, upload this file to a repository and enable 'GitHub Pages' in the repository settings. -->
 </body>
 </html>
