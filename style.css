@@ -475,7 +475,6 @@ main {
   background: rgba(224, 215, 199, 0.8);
   border: 1px solid rgba(148, 132, 110, 0.4);
 }
-
 /* =========================================
    PREMIUM SKILLS BLOCKS (NIEUW)
    ========================================= */
@@ -644,6 +643,8 @@ main {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--text-muted);
+}
+
 /* =========================================
    CONTACT (VERVOLG)
    ========================================= */
@@ -787,6 +788,7 @@ main {
   left: 45%;
   transform: rotate(-8deg);
 }
+
 /* =========================================
    LANGUAGE ICON GRID (LIKE YOUR EXAMPLE)
    ========================================= */
@@ -822,4 +824,23 @@ main {
   font-size: 13px;
   color: var(--text-soft);
   font-weight: 500;
+}
+/* =========================================
+   FIX: voorkom dat vlaggen verdwijnen
+   ========================================= */
+
+/* Alle afbeeldingen vervagen standaard */
+img {
+  opacity: 0.25;
+  transition: opacity .25s ease;
+}
+
+/* Maar vlaggen blijven volledig zichtbaar */
+.language-flag-frame img,
+.language-icon-grid img,
+.lang-icon img,
+.flag-item img,
+.language img,
+.flag img {
+  opacity: 1 !important;
 }
