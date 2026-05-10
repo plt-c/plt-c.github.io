@@ -117,32 +117,35 @@ main {
 }
 
 .brand-title {
-  font-size: 14px;
-  letter-spacing: 0.16em;
+  font-size: 15px;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-weight: 600;
-  color: var(--text-soft);
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1;
 }
 
 .brand-sub {
-  font-size: 11px;
-  letter-spacing: 0.18em;
+  font-size: 10px;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
   color: var(--text-muted);
+  margin-top: 4px;
 }
 
 .nav-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  font-size: 12px;
-  letter-spacing: 0.16em;
+  gap: 6px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 .nav-link {
   position: relative;
-  padding: 4px 8px;
+  padding: 10px 20px;
   border-radius: 999px;
   color: var(--text-soft);
   cursor: pointer;
@@ -153,12 +156,12 @@ main {
 .nav-link::after {
   content: "";
   position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: 2px;
+  left: 16px;
+  right: 16px;
+  bottom: 8px;
   height: 2px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+  background-color: var(--accent-blue);
   opacity: 0;
   transform: scaleX(0.4);
   transform-origin: center;
@@ -166,17 +169,15 @@ main {
 }
 
 .nav-link:hover {
-  background: rgba(224, 215, 199, 0.7);
-  transform: translateY(-1px);
+  background: rgba(232, 226, 216, 0.5);
 }
 
 .nav-link:hover::after {
-  opacity: 1;
-  transform: scaleX(1);
+  opacity: 0;
 }
 
 .nav-link.active {
-  background: rgba(224, 215, 199, 0.9);
+  background: #e8e2d8;
   color: var(--accent-blue);
 }
 
