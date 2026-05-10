@@ -1,143 +1,249 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Languages – Polat Caliskan</title>
-    <meta name="description" content="Language skills and multilingual communication of Polat Caliskan." />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polat Caliskan | Linguistic Stack</title>
 
-  <body>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+    <!-- TAILWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'beige-50': '#F5F2ED',
+                        'beige-100': '#E8E2D9',
+                        'beige-200': '#D9D3C9',
+                        'brand-blue': '#4A90E2',
+                        'ink': '#2C2420',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Helvetica Neue', 'Arial', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'Courier New', 'Courier', 'monospace'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/tailwindcss">
+        @layer components {
+            .tech-mono {
+                @apply font-mono text-[10px] tracking-[0.1em] uppercase opacity-60;
+            }
+
+            .photo-frame {
+                @apply relative overflow-hidden bg-white border-[10px] border-white 
+                       shadow-[0_10px_30px_rgba(44,36,32,0.15)] rounded-xl 
+                       transition-all duration-500;
+            }
+
+            .photo-frame:hover {
+                @apply scale-[1.03] rotate-1 shadow-[0_14px_40px_rgba(44,36,32,0.25)];
+            }
+
+            .progress-bar {
+                @apply h-2 w-full bg-slate-200 rounded-full overflow-hidden;
+            }
+
+            .progress-fill {
+                @apply h-full bg-brand-blue shadow-[0_0_8px_rgba(74,144,226,0.3)] transition-all duration-1000 ease-out;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-beige-50 text-ink/90 font-sans selection:bg-brand-blue/20 antialiased min-h-screen flex flex-col">
 
     <!-- HEADER -->
-    <header class="site-header">
-      <div class="nav-inner">
-        <div class="brand-block">
-          <div class="brand-title">POLAT CALISKAN</div>
-          <div class="brand-sub">SYSTEM & NETWORK SUPPORT</div>
+    <header class="w-full border-b border-ink/5 bg-white/50 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="flex flex-col leading-tight">
+                <span class="font-bold tracking-tighter text-xl text-ink">POLAT CALISKAN</span>
+                <span class="text-[10px] tech-mono text-brand-blue">SYSTEM & NETWORK SUPPORT</span>
+            </div>
+            <nav class="hidden md:flex gap-8">
+                <a href="index.html" class="tech-mono hover:text-brand-blue">Index</a>
+                <a href="personal.html" class="tech-mono hover:text-brand-blue">Biography</a>
+                <a href="experience.html" class="tech-mono hover:text-brand-blue">Experience</a>
+                <a href="education.html" class="tech-mono hover:text-brand-blue">Learning</a>
+                <a href="skills.html" class="tech-mono hover:text-brand-blue">Skills</a>
+                <a href="languages.html" class="tech-mono text-brand-blue border-b border-brand-blue pb-1">Languages</a>
+                <a href="hobbies.html" class="tech-mono hover:text-brand-blue">Personal</a>
+            </nav>
         </div>
-
-        <nav class="nav-links">
-          <a href="index.html" class="nav-link">Index</a>
-          <a href="personal.html" class="nav-link">Biography</a>
-          <a href="experience.html" class="nav-link">Experience</a>
-          <a href="education.html" class="nav-link">Learning</a>
-          <a href="skills.html" class="nav-link">Skills</a>
-          <a href="languages.html" class="nav-link active">Languages</a>
-          <a href="hobbies.html" class="nav-link">Personal</a>
-        </nav>
-      </div>
     </header>
 
     <!-- MAIN -->
-    <main>
-      <div class="page-shell">
+    <main class="flex-grow">
+        <div class="max-w-7xl mx-auto px-6 py-20 overflow-hidden">
 
-        <!-- TITLE -->
-        <header class="section-header fade-in-up">
-          <div class="section-kicker">The Stack of Languages</div>
-          <h1 class="section-title">Multilingual Communication</h1>
-          <p class="section-sub">
-            A clear overview of my spoken languages and technical language skills.
-          </p>
-        </header>
+            <!-- TITLE -->
+            <header class="mb-20 text-center md:text-left">
+                <div class="tech-mono text-brand-blue mb-2">The Stack of Languages</div>
+                <h1 class="text-4xl lg:text-6xl font-light tracking-tight text-ink mb-4">
+                    Multilingual <span class="italic font-serif">Communication</span>
+                </h1>
+                <p class="text-ink/60 max-w-xl text-lg font-light leading-relaxed">
+                    A clear overview of my spoken languages and technical language skills.
+                </p>
+            </header>
 
-        <!-- GRID -->
-        <section class="card-grid-2 fade-in-up">
+            <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr_1.2fr] gap-16 lg:gap-8 items-start">
 
-          <!-- LEFT SIDE -->
-          <div class="language-list">
+                <!-- LEFT: LANGUAGE BARS -->
+                <div class="space-y-12">
 
-            <article class="language-item">
-              <div class="language-header">
-                <span>Dutch – B2</span>
-                <span>85%</span>
-              </div>
-              <div class="language-bar">
-                <div class="language-fill" style="transform: scaleX(0.85);"></div>
-              </div>
-              <div class="language-label">Level: B2 – Upper‑Intermediate</div>
-            </article>
+                    <!-- DUTCH -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <h3 class="text-2xl font-bold text-ink">Dutch – B2</h3>
+                                <span class="tech-mono text-brand-blue">Upper-Intermediate</span>
+                            </div>
+                            <span class="tech-mono opacity-40">85% LOADED</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                    </div>
 
-            <article class="language-item">
-              <div class="language-header">
-                <span>English – B2</span>
-                <span>80%</span>
-              </div>
-              <div class="language-bar">
-                <div class="language-fill" style="transform: scaleX(0.80);"></div>
-              </div>
-              <div class="language-label">Level: B2 – Upper‑Intermediate</div>
-            </article>
+                    <!-- ENGLISH -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <h3 class="text-2xl font-bold text-ink">English – B2</h3>
+                                <span class="tech-mono text-brand-blue">Upper-Intermediate</span>
+                            </div>
+                            <span class="tech-mono opacity-40">80% LOADED</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+                    </div>
 
-            <article class="language-item">
-              <div class="language-header">
-                <span>Turkish – C2 / Native</span>
-                <span>100%</span>
-              </div>
-              <div class="language-bar">
-                <div class="language-fill" style="transform: scaleX(1);"></div>
-              </div>
-              <div class="language-label">Level: C2 – Native proficiency</div>
-            </article>
+                    <!-- TURKISH -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <h3 class="text-2xl font-bold text-ink">Turkish – Native</h3>
+                                <span class="tech-mono text-brand-blue">Native Proficiency</span>
+                            </div>
+                            <span class="tech-mono opacity-40">100% LOADED</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                    </div>
 
-            <article class="language-item">
-              <div class="language-header">
-                <span>Spanish – A1</span>
-                <span>20%</span>
-              </div>
-              <div class="language-bar">
-                <div class="language-fill" style="transform: scaleX(0.20);"></div>
-              </div>
-              <div class="language-label">Level: A1 – Beginner</div>
-            </article>
+                    <!-- SPANISH -->
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <h3 class="text-2xl font-bold text-ink">Spanish – A1</h3>
+                                <span class="tech-mono text-brand-blue">Beginner</span>
+                            </div>
+                            <span class="tech-mono opacity-40">20% LOADED</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 20%;"></div></div>
+                    </div>
+                </div>
 
-          </div>
+                <!-- MIDDLE: METADATA -->
+                <div class="space-y-6 lg:mt-24 lg:px-6 relative border-l-0 lg:border-l lg:border-r border-ink/5">
+                    <div class="tech-mono text-brand-blue border-l-2 border-brand-blue pl-4 mb-6">Communication Metadata</div>
+                    <p class="text-sm text-ink/70 leading-relaxed font-light">
+                        My multilingual background allows me to support a diverse range of users and collaborate effectively in global environments.
+                    </p>
+                    <div class="h-px w-12 bg-brand-blue/20 my-4"></div>
+                    <p class="text-sm text-ink/70 leading-relaxed font-light">
+                        I also work confidently with several technical languages and tools such as <strong>Python, HTML, CSS, JavaScript</strong> and <strong>SQL databases</strong>.
+                    </p>
+                </div>
 
-          <!-- RIGHT SIDE WITH FLAGS -->
-          <aside class="card language-right">
+                <!-- RIGHT: FLAG STACK -->
+                <div class="relative h-[650px] lg:h-[750px] mt-12 lg:mt-0 flex items-start justify-center">
+                    <div class="relative w-full max-w-[180px] lg:max-w-sm">
 
-            <div class="flag-column">
-              <img src="assets/flag-tr.jpg" alt="Turkish flag">
-              <img src="assets/flag-en.jpg" alt="English flag">
-              <img src="assets/flag-nl.jpg" alt="Dutch flag">
-              <img src="assets/flag-es.jpg" alt="Spanish flag">
+                        <!-- DUTCH -->
+                        <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(80px, -160px) rotate(-12deg); z-index: 10;">
+                            <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
+                                <img src="assets/flag-nl.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm font-bold">LANG_NL_SECURED</div>
+                            </div>
+                        </div>
+
+                        <!-- ENGLISH -->
+                        <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(160px, -20px) rotate(6deg); z-index: 9; animation-delay: 1s;">
+                            <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
+                                <img src="assets/flag-en.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm font-bold">LANG_UK_ENCRYPTED</div>
+                            </div>
+                        </div>
+
+                        <!-- TURKISH -->
+                        <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(100px, 140px) rotate(-8deg); z-index: 8; animation-delay: 2s;">
+                            <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
+                                <img src="assets/flag-tr.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm font-bold">LANG_TR_NATIVE</div>
+                            </div>
+                        </div>
+
+                        <!-- SPANISH -->
+                        <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(-40px, 260px) rotate(10deg); z-index: 7; animation-delay: 3s;">
+                            <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
+                                <img src="assets/flag-es.jpg" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm font-bold">LANG_ES_PARTIAL</div>
+                            </div>
+                        </div>
+
+                        <!-- CODING -->
+                        <div class="absolute animate-float" style="top: 25%; left: 5%; transform: translate(-260px, 360px) rotate(-4deg); z-index: 6; animation-delay: 4s;">
+                            <div class="photo-frame w-48 h-32 md:w-56 md:h-40">
+                                <img src="assets/coding-python.png" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000">
+                                <div class="absolute bottom-4 left-4 tech-mono text-[9px] bg-white/90 px-2 py-1 shadow-sm font-bold">LOGIC_PYTHON_V4</div>
+                            </div>
+                        </div>
+
+                        <!-- DECORATION -->
+                        <div class="absolute -z-10 -top-20 -right-20 w-48 h-48 border border-brand-blue/5 rounded-full animate-pulse"></div>
+                        <div class="absolute -z-10 bottom-0 -left-10 w-32 h-32 bg-brand-blue/5 blur-3xl rounded-full"></div>
+
+                    </div>
+                </div>
+
             </div>
-
-            <div class="card-title">Professional Communication & Technical Language Skills</div>
-
-            <p class="card-sub">
-              My multilingual background allows me to support a diverse range of users and collaborate effectively in global environments.
-            </p>
-
-            <p class="card-sub">
-              I also work confidently with several technical languages and tools such as Python, HTML, CSS, JavaScript,
-              and SQL databases.
-            </p>
-
-          </aside>
-
-        </section>
-
-      </div>
+        </div>
     </main>
 
     <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="footer-inner">
-        <div class="footer-row">
-          <span>Location: Zwanenburg, NL</span>
-          <span>Protocol: Secure_HTTPS</span>
+    <footer class="w-full border-t border-ink/5 bg-white/30 backdrop-blur-sm py-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between gap-6 opacity-60">
+                <div class="flex flex-col gap-2">
+                    <span class="tech-mono">Location: Rotterdam, NL</span>
+                    <span class="tech-mono">Protocol: Secure_Linguistic_V4</span>
+                </div>
+                <div class="flex flex-col md:items-end gap-2 text-right">
+                    <span class="tech-mono">Est. 2024 – Polat_Version_3.0</span>
+                    <div class="flex gap-4">
+                        <span class="tech-mono underline cursor-pointer">GitHub: PLT-C</span>
+                        <span class="tech-mono underline cursor-pointer">LinkedIn: Polat-Caliskan</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="footer-row">
-          <span>Est. 2024 – Polat_Version_3.0</span>
-          <span>GitHub: PLT-C</span>
-          <span>LinkedIn: Polat-Caliskan</span>
-        </div>
-      </div>
     </footer>
 
-  </body>
+</body>
 </html>
