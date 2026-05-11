@@ -1,7 +1,7 @@
 // =========================================
 // SIMPLE NAV ACTIVE STATE
 // =========================================
-<-----------rebuild-------------->
+
 
 (function () {
   const path = window.location.pathname.toLowerCase();
