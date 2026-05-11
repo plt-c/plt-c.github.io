@@ -13,8 +13,7 @@
     "/education.html": "education",
     "/skills.html": "skills",
     "/languages.html": "languages",
-    "/hobbies.html": "hobbies",
-    "/contact.html": "contact",
+    "/hobbies.html": "hobbies"
   };
 
   const current = map[path] || "home";
